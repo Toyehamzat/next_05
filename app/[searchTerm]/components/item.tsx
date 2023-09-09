@@ -10,6 +10,7 @@ export default function Item({ result }: Props) {
         <Link
           href={`https://en.wikipedia.org/?curid=${result.pageid}`}
           className="text-xl font-bold underline"
+          target="_blank"
         >
           {result.title}
         </Link>
@@ -32,5 +33,7 @@ export default function Item({ result }: Props) {
         {ItemTxtCol}
       </div>
     </article>
-  ) : null;
+  ) : (
+    <>{ItemTxtCol}</>
+  );
 }
